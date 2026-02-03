@@ -98,11 +98,12 @@ header {
 
 .main-section
 {
+  height: 500px;
   background-color: var(--transparent-primary-color);
   border-radius: 0 16px 16px 0;
 }
 
-.sidebar-section
+.project-section
 {
   background-color: var(--footer-transparent-background-color);
   border-radius: 16px 0 0 16px;
