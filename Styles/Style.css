@@ -4,31 +4,79 @@
   --primary-color: #2b6778;
   --transparent-primary-color: #2b677852;
   --primary-hover-color: #2b6778;
-  
+
   --secondary-color: #1b394b;
   --secondary-hover-color: #1b394b;
 
   --tertiary-color: #87bfd4;
-  --tertiary-hover-color: white;
+  --tertiary-hover-color: #ffffff;
 
-  --footer-background-color: black;
+  --footer-background-color: #000000;
   --footer-transparent-background-color: rgba(0, 0, 0, 0.3);
 
   --blur: 10px;
-
-  --font-family: Arial;
+  --font-family: "Arial", "Helvetica", sans-serif;
 }
 
-/* -------------------------------------------------- */
-/* Base / Viewport Anchoring                          */
-/* -------------------------------------------------- */
-
-html,
-body {
-  height: 100%;
+html {
   margin: 0;
+  padding: 10px;
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: medium;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  background-image: url("../Ressources/asupr2.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  overscroll-behavior: none;
 }
 
+body{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+header {
+  width: 100%;
+  height: clamp(64px, 10vh, 120px);
+  display: grid;
+  place-items: center;
+  background-color: var(--transparent-primary-color);
+}
+
+.header-link {
+  display: inline-block;
+  font-size: clamp(40px, 4vw, 50px);
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile-section{
+  height: 500px;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 20vh;
+  background-color: var(--transparent-primary-color);
+}
+
+.project-section{
+  height: 800px;
+  display: grid;
+  grid-template-columns: 20vh auto 20vh;
+  background-color: var(--transparent-primary-color);
+}
+
+footer {
+  width: 100%;
+  height: clamp(48px, 8vh, 80px);
+  display: grid;
+  place-items: center;
+  background-color: var(--footer-transparent-background-color);
+}
+/* 
 body {
   background-color: var(--primary-color);
   background-image: url("../Ressources/asupr2.jpg");
@@ -38,20 +86,12 @@ body {
   font-size: 20px;
 }
 
-/* -------------------------------------------------- */
-/* Page Grid                                          */
-/* -------------------------------------------------- */
-
 #body-container {
-  min-height: 100dvh; /* dynamic viewport height */
+  min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
 }
-
-/* -------------------------------------------------- */
-/* Header                                             */
-/* -------------------------------------------------- */
 
 header {
   grid-row: 1;
@@ -76,10 +116,6 @@ header {
 .header-link:hover {
   color: var(--tertiary-hover-color);
 }
-
-/* -------------------------------------------------- */
-/* Main Content (Grid: Main + Sidebar)                 */
-/* -------------------------------------------------- */
 
 .content-container {
   grid-row: 2;
@@ -109,10 +145,6 @@ header {
   border-radius: 16px 0 0 16px;
 }
 
-/* -------------------------------------------------- */
-/* Footer                                             */
-/* -------------------------------------------------- */
-
 footer {
   grid-row: 3;
   display: grid;
@@ -124,4 +156,4 @@ footer {
   backdrop-filter: blur(var(--blur));
   border-radius: 20px 20px 0 0;
   transition: ease 1.5s;
-}
+} */
